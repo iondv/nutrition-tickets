@@ -1,0 +1,1497 @@
+{
+  "classes": {
+    "tickets": {
+      "uml": {
+        "offset": {
+          "top": 13.975692749023438,
+          "left": 31.996551513671875
+        }
+      }
+    },
+    "recipient": {
+      "uml": {
+        "offset": {
+          "top": 69.94792175292969,
+          "left": 496.0069580078125
+        }
+      }
+    },
+    "person": {
+      "uml": {
+        "offset": {
+          "top": 140,
+          "left": 898.9757080078125
+        }
+      }
+    },
+    "documents": {
+      "uml": {
+        "offset": {
+          "top": 323.00347900390625,
+          "left": 242.98614501953125
+        }
+      }
+    }
+  },
+  "workflows": {
+    "ticketissuance": {
+      "states": {
+        "acknowledged": {
+          "uml": {
+            "offset": {
+              "top": 148.99305725097656,
+              "left": 124.02780151367188
+            }
+          }
+        },
+        "expired": {
+          "uml": {
+            "offset": {
+              "top": 148.99305725097656,
+              "left": 350.03472900390625
+            }
+          }
+        }
+      },
+      "transitions": {}
+    }
+  },
+  "interfaces": [],
+  "changeLogs": [
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "dateCompletion.tickets",
+      "oldValue": {
+        "formula": {
+          "dateAdd": [
+            "$dateIssue",
+            1,
+            "m"
+          ]
+        },
+        "type": null
+      },
+      "newValue": {
+        "formula": {
+          "dateAdd": [
+            "$dateIssue",
+            "1",
+            "m"
+          ]
+        },
+        "type": null
+      },
+      "date": "2019-07-25T05:49:08.559Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "employeeAcknowledging.tickets",
+      "oldValue": {
+        "nullable": false,
+        "type": null
+      },
+      "newValue": {
+        "nullable": true,
+        "type": null
+      },
+      "date": "2019-07-25T05:29:11.625Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "employeeIssuing.tickets",
+      "oldValue": {
+        "nullable": false,
+        "type": null
+      },
+      "newValue": {
+        "nullable": true,
+        "type": null
+      },
+      "date": "2019-07-25T05:29:06.682Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "series.documents",
+      "oldValue": {
+        "type": 6
+      },
+      "newValue": {
+        "type": 0
+      },
+      "date": "2019-07-25T04:11:25.024Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "tickets",
+      "oldValue": {
+        "creatorTracker": "creator",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "creatorTracker": "employeeIssuing",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T23:53:57.687Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "tickets",
+      "oldValue": {
+        "creationTracker": "employeeIssuing",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "creationTracker": "",
+        "creatorTracker": "creator",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T23:53:02.770Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "state.tickets",
+      "oldValue": {
+        "defaultValue": "\"issued\"",
+        "type": null
+      },
+      "newValue": {
+        "defaultValue": "issued",
+        "type": null
+      },
+      "date": "2019-07-24T23:51:47.910Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "dateCompletion.tickets",
+      "oldValue": {
+        "mode": 0,
+        "type": null
+      },
+      "newValue": {
+        "mode": 2,
+        "type": null
+      },
+      "date": "2019-07-24T23:48:52.389Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "dateIssue.tickets",
+      "oldValue": {
+        "mode": 0,
+        "type": null
+      },
+      "newValue": {
+        "mode": 2,
+        "type": null
+      },
+      "date": "2019-07-24T23:48:46.492Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "dateAcknowledging.tickets",
+      "oldValue": {
+        "mode": 0,
+        "type": null
+      },
+      "newValue": {
+        "mode": 2,
+        "type": null
+      },
+      "date": "2019-07-24T23:48:37.917Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "recipient.tickets",
+      "oldValue": {
+        "type": 0
+      },
+      "newValue": {
+        "type": 13
+      },
+      "date": "2019-07-24T23:48:24.651Z"
+    },
+    {
+      "action": "create",
+      "type": "workflow transition",
+      "name": "close",
+      "date": "2019-07-24T03:57:50.752Z"
+    },
+    {
+      "action": "update",
+      "type": "workflow transition",
+      "name": "acknowledge",
+      "oldValue": {
+        "roles": []
+      },
+      "newValue": {
+        "roles": [
+          "Cashiers",
+          "Admins"
+        ]
+      },
+      "date": "2019-07-24T03:52:05.496Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "dateAcknowledging.tickets",
+      "date": "2019-07-24T03:49:23.366Z"
+    },
+    {
+      "action": "create",
+      "type": "workflow transition",
+      "name": "acknowledge",
+      "date": "2019-07-24T03:47:35.985Z"
+    },
+    {
+      "action": "create",
+      "type": "workflow state",
+      "name": "expired",
+      "date": "2019-07-24T03:43:13.821Z"
+    },
+    {
+      "action": "create",
+      "type": "workflow state",
+      "name": "acknowledged",
+      "date": "2019-07-24T03:42:55.098Z"
+    },
+    {
+      "action": "create",
+      "type": "workflow state",
+      "name": "issued",
+      "date": "2019-07-24T03:40:06.382Z"
+    },
+    {
+      "action": "create",
+      "type": "workflow",
+      "name": "ticketissuance",
+      "date": "2019-07-24T03:38:48.734Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "person",
+      "oldValue": {
+        "compositeIndexes": null,
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "compositeIndexes": [
+          {
+            "properties": [
+              "surname",
+              "name",
+              "patronymic",
+              "dateBirth"
+            ],
+            "unique": true
+          }
+        ],
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T03:36:44.901Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "documents",
+      "oldValue": {
+        "semantic": "series| |number| |date",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "semantic": "series| |number| - |dateReceiving",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T03:35:37.870Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "documents",
+      "oldValue": {
+        "semantic": "",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "semantic": "series| |number| |date",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T03:35:22.094Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "person",
+      "oldValue": {
+        "semantic": "",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "semantic": "surname| |name| |patronymic",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T03:34:56.949Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "recipient",
+      "oldValue": {
+        "semantic": "surname| |name| |patronumic",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "semantic": "",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T03:34:50.403Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "recipient",
+      "oldValue": {
+        "semantic": "",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "semantic": "surname| |name| |patronumic",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T03:34:32.442Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "tickets",
+      "oldValue": {
+        "semantic": "number| |date",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "semantic": "number| - |dateIssue",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T03:33:56.150Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "tickets",
+      "oldValue": {
+        "semantic": "",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "semantic": "number| |date",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T03:33:24.484Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "number.tickets",
+      "oldValue": {
+        "name": "tickets",
+        "caption": "Tickets",
+        "type": null
+      },
+      "newValue": {
+        "name": "number",
+        "caption": "Number",
+        "type": null
+      },
+      "date": "2019-07-24T03:17:46.212Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "passport.recipient",
+      "oldValue": {
+        "refClass": "documents",
+        "itemsClass": "",
+        "type": null
+      },
+      "newValue": {
+        "refClass": "",
+        "itemsClass": "documents",
+        "type": null
+      },
+      "date": "2019-07-24T03:15:36.955Z"
+    },
+    {
+      "action": "update",
+      "type": "nav item",
+      "name": "documents.nutritionTickets",
+      "oldValue": {
+        "orderNumber": 40,
+        "type": null
+      },
+      "newValue": {
+        "orderNumber": 30,
+        "type": null
+      },
+      "date": "2019-07-24T03:14:12.231Z"
+    },
+    {
+      "action": "update",
+      "type": "nav item",
+      "name": "person.nutritionTickets",
+      "oldValue": {
+        "orderNumber": 30,
+        "type": null
+      },
+      "newValue": {
+        "orderNumber": 40,
+        "type": null
+      },
+      "date": "2019-07-24T03:14:07.319Z"
+    },
+    {
+      "action": "create",
+      "type": "nav item",
+      "name": "documents.nutritionTickets",
+      "date": "2019-07-24T03:12:06.955Z"
+    },
+    {
+      "action": "create",
+      "type": "nav item",
+      "name": "person.nutritionTickets",
+      "date": "2019-07-24T03:11:39.444Z"
+    },
+    {
+      "action": "create",
+      "type": "nav item",
+      "name": "recipient.nutritionTickets",
+      "date": "2019-07-24T03:05:55.877Z"
+    },
+    {
+      "action": "create",
+      "type": "nav item",
+      "name": "tickets.nutritionTickets",
+      "date": "2019-07-24T03:02:35.658Z"
+    },
+    {
+      "action": "create",
+      "type": "nav section",
+      "name": "nutritionTickets",
+      "date": "2019-07-24T03:01:53.511Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "dateCompletion.tickets",
+      "oldValue": {
+        "formula": null,
+        "type": null
+      },
+      "newValue": {
+        "formula": {
+          "dateAdd": [
+            "$dateIssue",
+            1,
+            "m"
+          ]
+        },
+        "type": null
+      },
+      "date": "2019-07-24T01:43:02.207Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "sum.tickets",
+      "oldValue": {
+        "nullable": false,
+        "type": null
+      },
+      "newValue": {
+        "nullable": true,
+        "type": null
+      },
+      "date": "2019-07-24T01:41:00.878Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "numberCategories.recipient",
+      "oldValue": {
+        "formula": {
+          "add": [
+            {
+              "if": [
+                {
+                  "eq": [
+                    "student",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            },
+            {
+              "if": [
+                {
+                  "eq": [
+                    "pensioner",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            },
+            {
+              "if": [
+                {
+                  "eq": [
+                    "singleMother",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            },
+            {
+              "if": [
+                {
+                  "eq": [
+                    "memberFamily",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            },
+            {
+              "if": [
+                {
+                  "eq": [
+                    "disabled",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            },
+            {
+              "if": [
+                {
+                  "eq": [
+                    "refugee",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        "type": null
+      },
+      "newValue": {
+        "formula": {
+          "add": [
+            {
+              "if": [
+                {
+                  "eq": [
+                    "$student",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            },
+            {
+              "if": [
+                {
+                  "eq": [
+                    "$pensioner",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            },
+            {
+              "if": [
+                {
+                  "eq": [
+                    "$singleMother",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            },
+            {
+              "if": [
+                {
+                  "eq": [
+                    "$memberFamily",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            },
+            {
+              "if": [
+                {
+                  "eq": [
+                    "$disabled",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            },
+            {
+              "if": [
+                {
+                  "eq": [
+                    "$refugee",
+                    true
+                  ]
+                },
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        "type": null
+      },
+      "date": "2019-07-24T01:40:42.687Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "sum.tickets",
+      "oldValue": {
+        "type": 0,
+        "formula": null
+      },
+      "newValue": {
+        "type": 6,
+        "formula": {
+          "mul": [
+            "$recipient.numberCategories",
+            200
+          ]
+        }
+      },
+      "date": "2019-07-24T01:40:17.402Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "numberCategories.recipient",
+      "date": "2019-07-24T01:38:00.020Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "recipient.tickets",
+      "oldValue": {
+        "backColl": "tickets",
+        "type": null
+      },
+      "newValue": {
+        "backColl": "",
+        "type": null
+      },
+      "date": "2019-07-24T01:21:18.807Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "tickets.recipient",
+      "oldValue": {
+        "backRef": "",
+        "type": null
+      },
+      "newValue": {
+        "backRef": "recipient",
+        "type": null
+      },
+      "date": "2019-07-24T01:21:00.064Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "recipient.tickets",
+      "oldValue": {
+        "backColl": "",
+        "type": null
+      },
+      "newValue": {
+        "backColl": "tickets",
+        "type": null
+      },
+      "date": "2019-07-24T01:20:36.681Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "recipient.tickets",
+      "date": "2019-07-24T01:18:59.352Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "documents",
+      "oldValue": {
+        "compositeIndexes": [
+          {
+            "properties": [
+              "series",
+              "number",
+              "date"
+            ],
+            "unique": true
+          }
+        ],
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "compositeIndexes": [
+          {
+            "properties": [
+              "series",
+              "number",
+              "dateReceiving"
+            ],
+            "unique": true
+          }
+        ],
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T01:17:23.272Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "documents",
+      "oldValue": {
+        "compositeIndexes": null,
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "compositeIndexes": [
+          {
+            "properties": [
+              "series",
+              "number",
+              "date"
+            ],
+            "unique": true
+          }
+        ],
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T01:16:42.297Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "organisationReceiving.documents",
+      "date": "2019-07-24T01:14:33.872Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "dateReceiving.documents",
+      "date": "2019-07-24T01:13:57.957Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "number.documents",
+      "date": "2019-07-24T01:13:22.336Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "series.documents",
+      "date": "2019-07-24T01:13:02.503Z"
+    },
+    {
+      "action": "remove",
+      "type": "class attribute",
+      "name": "vidDocument.documents",
+      "date": "2019-07-24T01:12:20.086Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "vidDocument.documents",
+      "date": "2019-07-24T01:12:08.079Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "passport.recipient",
+      "oldValue": {
+        "refClass": "",
+        "backRef": "",
+        "type": null
+      },
+      "newValue": {
+        "refClass": "documents",
+        "backRef": "recipient",
+        "type": null
+      },
+      "date": "2019-07-24T01:11:09.079Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "recipient.documents",
+      "date": "2019-07-24T01:09:29.329Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "person",
+      "oldValue": {
+        "journaling": false,
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "journaling": true,
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T01:07:55.430Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "recipient",
+      "oldValue": {
+        "journaling": false,
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "journaling": true,
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T01:07:50.591Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "tickets",
+      "oldValue": {
+        "journaling": false,
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "journaling": true,
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T01:07:45.934Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "guid.documents",
+      "date": "2019-07-24T01:07:36.604Z"
+    },
+    {
+      "action": "create",
+      "type": "class",
+      "name": "documents",
+      "date": "2019-07-24T01:07:36.577Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "tickets",
+      "oldValue": {
+        "creationTracker": "",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "creationTracker": "employeeIssuing",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T01:04:30.277Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "recipient",
+      "oldValue": {
+        "ancestor": "",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "ancestor": "person",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-24T01:03:52.523Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "refugee.recipient",
+      "date": "2019-07-24T01:02:22.734Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "disabled.recipient",
+      "date": "2019-07-24T01:01:25.615Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "memberFamily.recipient",
+      "date": "2019-07-24T01:00:44.286Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "singleMother.recipient",
+      "date": "2019-07-24T00:59:59.399Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "pensioner.recipient",
+      "date": "2019-07-24T00:59:16.494Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "student.recipient",
+      "date": "2019-07-24T00:58:32.878Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "tickets.recipient",
+      "date": "2019-07-24T00:56:24.675Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "passport.recipient",
+      "date": "2019-07-24T00:53:56.158Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "user.person",
+      "date": "2019-07-24T00:32:36.125Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "sex.person",
+      "date": "2019-07-24T00:31:34.493Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "email.person",
+      "date": "2019-07-24T00:27:56.469Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "phone.person",
+      "date": "2019-07-24T00:27:17.165Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "dateBirth.person",
+      "date": "2019-07-24T00:25:43.028Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "patronymic.person",
+      "date": "2019-07-24T00:20:11.333Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "name.person",
+      "date": "2019-07-24T00:19:44.285Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "surname.person",
+      "date": "2019-07-24T00:19:33.845Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "guid.person",
+      "date": "2019-07-24T00:19:09.108Z"
+    },
+    {
+      "action": "create",
+      "type": "class",
+      "name": "person",
+      "date": "2019-07-24T00:19:09.077Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "guid.recipient",
+      "date": "2019-07-24T00:18:34.675Z"
+    },
+    {
+      "action": "create",
+      "type": "class",
+      "name": "recipient",
+      "date": "2019-07-24T00:18:34.647Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "sum.tickets",
+      "oldValue": {
+        "indexed": false,
+        "type": null
+      },
+      "newValue": {
+        "indexed": true,
+        "type": null
+      },
+      "date": "2019-07-24T00:11:51.972Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "sum.tickets",
+      "date": "2019-07-24T00:11:43.452Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "employeeAcknowledging.tickets",
+      "date": "2019-07-24T00:10:29.389Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "employeeIssuing.tickets",
+      "oldValue": {
+        "type": 17
+      },
+      "newValue": {
+        "type": 18
+      },
+      "date": "2019-07-24T00:09:15.197Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "employeeIssuing.tickets",
+      "date": "2019-07-24T00:08:56.164Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "state.tickets",
+      "date": "2019-07-23T23:58:36.587Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "dateCompletion.tickets",
+      "date": "2019-07-23T23:47:20.916Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "dateIssue.tickets",
+      "date": "2019-07-23T23:45:48.717Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "tickets.tickets",
+      "date": "2019-07-23T06:34:11.873Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "guid.tickets",
+      "date": "2019-07-23T06:19:06.601Z"
+    },
+    {
+      "action": "create",
+      "type": "class",
+      "name": "tickets",
+      "date": "2019-07-23T06:19:06.576Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "singleMother.recipient",
+      "oldValue": {
+        "defaultValue": "",
+        "nullable": true,
+        "type": null
+      },
+      "newValue": {
+        "defaultValue": "fasle",
+        "nullable": false,
+        "type": null
+      },
+      "date": "2019-07-25T06:43:21.737Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "student.recipient",
+      "oldValue": {
+        "defaultValue": "",
+        "nullable": true,
+        "type": null
+      },
+      "newValue": {
+        "defaultValue": "false",
+        "nullable": false,
+        "type": null
+      },
+      "date": "2019-07-25T06:43:31.566Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "pensioner.recipient",
+      "oldValue": {
+        "defaultValue": "",
+        "nullable": true,
+        "type": null
+      },
+      "newValue": {
+        "defaultValue": "false",
+        "nullable": false,
+        "type": null
+      },
+      "date": "2019-07-25T06:43:40.524Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "memberFamily.recipient",
+      "oldValue": {
+        "defaultValue": "",
+        "nullable": true,
+        "type": null
+      },
+      "newValue": {
+        "defaultValue": "false",
+        "nullable": false,
+        "type": null
+      },
+      "date": "2019-07-25T06:43:53.437Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "disabled.recipient",
+      "oldValue": {
+        "defaultValue": "",
+        "nullable": true,
+        "type": null
+      },
+      "newValue": {
+        "defaultValue": "false",
+        "nullable": false,
+        "type": null
+      },
+      "date": "2019-07-25T06:44:04.237Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "refugee.recipient",
+      "oldValue": {
+        "defaultValue": "",
+        "nullable": true,
+        "type": null
+      },
+      "newValue": {
+        "defaultValue": "false",
+        "nullable": false,
+        "type": null
+      },
+      "date": "2019-07-25T06:44:13.317Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "dateCompletion.tickets",
+      "oldValue": {
+        "defaultValue": "",
+        "formula": {
+          "dateAdd": [
+            "$dateIssue",
+            "1",
+            "m"
+          ]
+        },
+        "type": null
+      },
+      "newValue": {
+        "defaultValue": "{\"dateAdd\":[\"$dateIssue\",\"28\",d]}",
+        "formula": "",
+        "type": null
+      },
+      "date": "2019-07-25T06:52:32.054Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "documents",
+      "oldValue": {
+        "semantic": "series| |number| - |dateReceiving",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "semantic": "series| № |number| - |dateReceiving",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-25T07:05:54.853Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "documents",
+      "oldValue": {
+        "semantic": "series| № |number| - |dateReceiving",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "semantic": "series| № |number",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-25T07:06:15.576Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "phone.person",
+      "oldValue": {
+        "type": 6
+      },
+      "newValue": {
+        "type": 0
+      },
+      "date": "2019-07-25T07:11:54.001Z"
+    },
+    {
+      "action": "update",
+      "type": "class",
+      "name": "recipient",
+      "oldValue": {
+        "caption": " Recipient",
+        "key": [
+          null
+        ]
+      },
+      "newValue": {
+        "caption": "Recipient",
+        "key": [
+          null
+        ]
+      },
+      "date": "2019-07-26T02:50:47.421Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "docConfirming.recipient",
+      "date": "2019-07-26T06:08:31.279Z"
+    },
+    {
+      "action": "create",
+      "type": "class attribute",
+      "name": "scanDocument.documents",
+      "date": "2019-07-26T06:09:25.118Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "tickets.recipient",
+      "oldValue": {
+        "selConditions": null,
+        "type": null
+      },
+      "newValue": {
+        "selConditions": {
+          "property": "dateCompletion",
+          "operation": 8,
+          "value": [
+            "$$now"
+          ],
+          "nestedConditions": []
+        },
+        "type": null
+      },
+      "date": "2019-07-26T06:38:59.322Z"
+    },
+    {
+      "action": "update",
+      "type": "class attribute",
+      "name": "dateCompletion.tickets",
+      "oldValue": {
+        "defaultValue": "{\"dateAdd\":[\"$dateIssue\",\"28\",d]}",
+        "type": null
+      },
+      "newValue": {
+        "defaultValue": "{\"dateAdd\":[\"$dateIssue\",28,\"d\"]}",
+        "type": null
+      },
+      "date": "2019-07-26T06:50:39.834Z"
+    },
+    {
+      "action": "update",
+      "type": "workflow transition",
+      "name": "acknowledge",
+      "oldValue": {
+        "assignments": [
+          {
+            "key": "state",
+            "value": "acknowledged"
+          },
+          {
+            "key": "dateConfirmed",
+            "value": "now()"
+          },
+          {
+            "key": "userConfirmed",
+            "value": "$$uid"
+          }
+        ]
+      },
+      "newValue": {
+        "assignments": [
+          {
+            "key": "state",
+            "value": "acknowledged"
+          },
+          {
+            "key": "dateAcknowledging",
+            "value": "now()"
+          },
+          {
+            "key": "employeeAcknowledging",
+            "value": "$$uid"
+          }
+        ]
+      },
+      "date": "2019-07-28T22:37:21.066Z"
+    }
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "name": "recipient",
+  "caption": "Recipient",
+  "key": [
+    "guid"
+  ],
+  "semantic": "",
+  "version": "",
+  "ancestor": "person",
+  "container": "",
+  "creationTracker": "",
+  "changeTracker": "",
+  "compositeIndexes": null,
+  "journaling": true,
+  "isStruct": false,
+  "properties": [
+    {
+      "name": "guid",
+      "caption": "ID",
+      "type": 12,
+      "size": 24,
+      "readonly": true,
+      "indexed": true,
+      "unique": true,
+      "autoassigned": true,
+      "orderNumber": 10,
+      "mode": 0,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "defaultValue": "",
+      "binding": null,
+      "selConditions": null,
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": null,
+      "eagerLoading": false,
+      "nullable": false,
+      "indexSearch": false
+    },
+    {
+      "name": "passport",
+      "caption": "Passport",
+      "type": 14,
+      "orderNumber": 20,
+      "mode": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "documents",
+      "backRef": "recipient",
+      "backColl": "",
+      "defaultValue": "",
+      "binding": null,
+      "selConditions": null,
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": null,
+      "eagerLoading": false,
+      "readonly": false,
+      "indexed": false,
+      "nullable": true,
+      "unique": false,
+      "autoassigned": false,
+      "indexSearch": false
+    },
+    {
+      "name": "tickets",
+      "caption": "Tickets",
+      "type": 14,
+      "orderNumber": 30,
+      "mode": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "tickets",
+      "backRef": "recipient",
+      "backColl": "",
+      "defaultValue": "",
+      "binding": null,
+      "selConditions": {
+        "property": "dateCompletion",
+        "operation": 8,
+        "value": [
+          "$$now"
+        ],
+        "nestedConditions": []
+      },
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": null,
+      "eagerLoading": false,
+      "readonly": false,
+      "indexed": false,
+      "nullable": true,
+      "unique": false,
+      "autoassigned": false,
+      "indexSearch": false
+    },
+    {
+      "name": "student",
+      "caption": "Student",
+      "type": 10,
+      "orderNumber": 40,
+      "mode": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "defaultValue": "false",
+      "binding": null,
+      "selConditions": null,
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": null,
+      "eagerLoading": false,
+      "readonly": false,
+      "indexed": true,
+      "nullable": false,
+      "unique": false,
+      "autoassigned": false,
+      "indexSearch": false
+    },
+    {
+      "name": "pensioner",
+      "caption": "Pensioner",
+      "type": 10,
+      "orderNumber": 50,
+      "mode": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "defaultValue": "false",
+      "binding": null,
+      "selConditions": null,
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": null,
+      "eagerLoading": false,
+      "readonly": false,
+      "indexed": true,
+      "nullable": false,
+      "unique": false,
+      "autoassigned": false,
+      "indexSearch": false
+    },
+    {
+      "name": "singleMother",
+      "caption": "Single mother",
+      "type": 10,
+      "orderNumber": 60,
+      "mode": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "defaultValue": "fasle",
+      "binding": null,
+      "selConditions": null,
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": null,
+      "eagerLoading": false,
+      "readonly": false,
+      "indexed": true,
+      "nullable": false,
+      "unique": false,
+      "autoassigned": false,
+      "indexSearch": false
+    },
+    {
+      "name": "memberFamily",
+      "caption": "Member of a large family",
+      "type": 10,
+      "orderNumber": 70,
+      "mode": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "defaultValue": "false",
+      "binding": null,
+      "selConditions": null,
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": null,
+      "eagerLoading": false,
+      "readonly": false,
+      "indexed": true,
+      "nullable": false,
+      "unique": false,
+      "autoassigned": false,
+      "indexSearch": false
+    },
+    {
+      "name": "disabled",
+      "caption": "Disabled",
+      "type": 10,
+      "orderNumber": 80,
+      "mode": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "defaultValue": "false",
+      "binding": null,
+      "selConditions": null,
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": null,
+      "eagerLoading": false,
+      "readonly": false,
+      "indexed": true,
+      "nullable": false,
+      "unique": false,
+      "autoassigned": false,
+      "indexSearch": false
+    },
+    {
+      "name": "refugee",
+      "caption": "Refugee",
+      "type": 10,
+      "orderNumber": 90,
+      "mode": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "defaultValue": "false",
+      "binding": null,
+      "selConditions": null,
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": null,
+      "eagerLoading": false,
+      "readonly": false,
+      "indexed": true,
+      "nullable": false,
+      "unique": false,
+      "autoassigned": false,
+      "indexSearch": false
+    },
+    {
+      "name": "numberCategories",
+      "caption": "Number of selected categories",
+      "type": 6,
+      "orderNumber": 100,
+      "mode": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "defaultValue": "",
+      "binding": null,
+      "selConditions": null,
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": {
+        "add": [
+          {
+            "if": [
+              {
+                "eq": [
+                  "$student",
+                  true
+                ]
+              },
+              1,
+              0
+            ]
+          },
+          {
+            "if": [
+              {
+                "eq": [
+                  "$pensioner",
+                  true
+                ]
+              },
+              1,
+              0
+            ]
+          },
+          {
+            "if": [
+              {
+                "eq": [
+                  "$singleMother",
+                  true
+                ]
+              },
+              1,
+              0
+            ]
+          },
+          {
+            "if": [
+              {
+                "eq": [
+                  "$memberFamily",
+                  true
+                ]
+              },
+              1,
+              0
+            ]
+          },
+          {
+            "if": [
+              {
+                "eq": [
+                  "$disabled",
+                  true
+                ]
+              },
+              1,
+              0
+            ]
+          },
+          {
+            "if": [
+              {
+                "eq": [
+                  "$refugee",
+                  true
+                ]
+              },
+              1,
+              0
+            ]
+          }
+        ]
+      },
+      "eagerLoading": false,
+      "readonly": false,
+      "indexed": false,
+      "nullable": true,
+      "unique": false,
+      "autoassigned": false,
+      "indexSearch": false
+    },
+    {
+      "name": "docConfirming",
+      "caption": "Document confirming the benefit",
+      "type": 110,
+      "orderNumber": 110,
+      "mode": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": "",
+      "maxFileCount": 0,
+      "hint": "",
+      "semantic": "",
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "defaultValue": "",
+      "binding": null,
+      "selConditions": null,
+      "selSorting": null,
+      "selectionProvider": null,
+      "formula": null,
+      "eagerLoading": false,
+      "readonly": false,
+      "indexed": false,
+      "nullable": true,
+      "unique": false,
+      "autoassigned": false,
+      "indexSearch": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "code": "recipient",
+  "caption": "Recipient",
+  "type": 1,
+  "orderNumber": 20,
+  "title": "",
+  "hint": "",
+  "classname": "recipient",
+  "container": "",
+  "collection": "",
+  "url": "",
+  "conditions": [],
+  "sorting": [],
+  "pathChains": []
+}

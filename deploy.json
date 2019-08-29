@@ -1,0 +1,119 @@
+{
+  "namespace": "nutrition-tickets",
+  "parametrised": true,
+  "deployer": "built-in",
+  "globals": {
+    "staticOptions": {
+      "maxAge": 3600000
+    },
+    "moduleTitles": {},
+    "explicitTopMenu": [],
+    "plugins": {
+      "actualAclProvider": {
+        "module": "core/impl/access/DsAcl",
+        "initMethod": "init",
+        "initLevel": 1,
+        "options": {
+          "dataSource": "ion://Db"
+        }
+      },
+      "aclProvider": {
+        "module": "core/impl/access/aclMetaMap",
+        "options": {
+          "dataRepo": "ion://dataRepo",
+          "acl": "ion://actualAclProvider",
+          "accessManager": "ion://roleAccessManager",
+          "calculator": "ion://calculator",
+          "map": {
+            "person@nutrition-tickets": {
+              "isEntry": true,
+              "sidAttribute": "user",
+              "jumps": [
+                "employee"
+              ]
+            },
+            "employee@nutrition-tickets": {
+              "sidAttribute": "id",
+              "jumps": [
+                "organization",
+                "person",
+                "substitution"
+              ]
+            }
+          }
+        }
+      },
+      "dataRepo": {
+        "options": {
+          "maxEagerDepth": 4
+        }
+      },
+      "customProfile": {
+        "module": "lib/plugins/customProfile",
+        "options": {
+          "metaRepo": "ion://metaRepo",
+          "dataRepo": "ion://dataRepo",
+          "fields": {
+            "surname": {
+              "caption": "Фамилия",
+              "required": false,
+              "readonly": true
+            },
+            "name": {
+              "caption": "Имя",
+              "required": false,
+              "readonly": true
+            },
+            "patronymic": {
+              "caption": "Отчество",
+              "required": false,
+              "readonly": true
+            },
+            "dateBirth": {
+              "caption": "Дата рождения",
+              "required": false,
+              "readonly": true,
+              "type": 120
+            },
+            "creator": {
+              "caption": "Создан пользователем",
+              "required": false,
+              "readonly": true
+            },
+            "editor": {
+              "caption": "Изменен пользователем",
+              "required": false,
+              "readonly": true
+            }
+          },
+          "propertyMap": {
+            "person@nutrition-tickets": {
+              "filter": "user",
+              "properties": {
+                "person": "id",
+                "surname": "surname",
+                "name": "name",
+                "patronymic": "patronymic",
+                "dateBirth": "birthDate",
+                "creator": "creator",
+                "editor": "editor"
+              },
+              "recursion": {
+                "id": "id"
+              }
+            }
+          }
+        }
+      },
+      "accounts": {
+        "options": {
+          "plugins": {
+            "customProfile": "ion://customProfile"
+          }
+        }
+      }
+    },
+    "jobs": {}
+  },
+  "modules": {}
+}

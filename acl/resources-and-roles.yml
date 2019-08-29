@@ -1,0 +1,76 @@
+roles:
+  - id: Admins
+    name: Администраторы
+    permissions:
+      "*":
+        - full
+  - id: Operators
+    name: Операторы
+    permissions:
+      n:::nutrition-tickets@recipient:
+        - read
+        - use
+        - write
+      n:::nutrition-tickets@tickets:
+        - read
+      n:::nutrition-tickets@documents:
+        - read
+      c:::recipient@nutrition-tickets:
+        - read
+        - use
+        - write
+        - delete
+      c:::person@nutrition-tickets:
+        - read
+      c:::documents@nutrition-tickets:
+        - read
+        - use
+        - write
+        - delete
+      c:::tickets@nutrition-tickets:
+        - read
+        - use
+        - write
+  - id: Cashiers
+    name: Кассир
+    permissions:
+      n:::nutrition-tickets@recipient:
+        - read
+        - use
+        - write
+      n:::nutrition-tickets@tickets:
+        - read
+      n:::nutrition-tickets@documents:
+        - read
+      c:::recipient@nutrition-tickets:
+        - read
+        - use
+        - write
+      c:::tickets@nutrition-tickets:
+        - read
+        - use
+        - write
+      c:::documents@nutrition-tickets:
+        - read
+        - use
+        - write
+      c:::person@nutrition-tickets:
+        - read
+  - id: Controllers
+    name: Контролер
+    permissions:
+      n:::nutrition-tickets@recipient:
+        - read
+      n:::nutrition-tickets@tickets:
+        - read
+      n:::nutrition-tickets@documents:
+        - read
+      c:::person@nutrition-tickets:
+        - read
+      c:::recipient@nutrition-tickets:
+        - read
+      c:::documents@nutrition-tickets:
+        - read
+      c:::tickets@nutrition-tickets:
+        - read
+      

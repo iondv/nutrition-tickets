@@ -1,0 +1,15 @@
+{
+  "code": "person",
+  "caption": "Employee",
+  "type": 1,
+  "orderNumber": 40,
+  "title": "",
+  "hint": "",
+  "classname": "person",
+  "container": "",
+  "collection": "",
+  "url": "",
+  "conditions": [],
+  "sorting": [],
+  "pathChains": []
+}

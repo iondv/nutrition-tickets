@@ -1,0 +1,10 @@
+{
+  "name": "nutrition-tickets",
+  "description": "Social nutrition tickets",
+  "version": "0.0.0",
+  "changedState": {
+    "major": true,
+    "minor": true,
+    "patch": true
+  }
+}

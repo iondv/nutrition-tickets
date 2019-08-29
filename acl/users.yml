@@ -1,0 +1,26 @@
+users:
+  - id: operator
+    name: Оператор
+    pwd: operator
+    type: local
+    roles:
+      - Operators
+  - id: admin
+    name: Администратор
+    pwd: admin
+    type: local
+    roles:
+      - Admins
+  - id: cashier
+    name: Кассир
+    pwd: cashier
+    type: local
+    roles:
+      - Cashiers
+  - id: controller
+    name: Контролер
+    pwd: controller
+    type: local
+    roles:
+      - Controllers
+  

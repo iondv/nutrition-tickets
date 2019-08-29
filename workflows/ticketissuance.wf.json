@@ -1,0 +1,120 @@
+{
+  "name": "ticketissuance",
+  "caption": "Ticket issuance",
+  "wfClass": "tickets",
+  "startState": "issued",
+  "states": [
+    {
+      "name": "issued",
+      "caption": "Issued by",
+      "maxPeriod": "",
+      "conditions": [],
+      "itemPermissions": [],
+      "propertyPermissions": [],
+      "selectionProviders": []
+    },
+    {
+      "name": "acknowledged",
+      "caption": "Acknowledged",
+      "maxPeriod": "",
+      "conditions": [],
+      "itemPermissions": [],
+      "propertyPermissions": [],
+      "selectionProviders": [],
+      "options": {
+        "uml": {
+          "offset": {
+            "top": 148.99305725097656,
+            "left": 124.02780151367188
+          }
+        }
+      }
+    },
+    {
+      "name": "expired",
+      "caption": "Expired",
+      "maxPeriod": "",
+      "conditions": [],
+      "itemPermissions": [],
+      "propertyPermissions": [],
+      "selectionProviders": [],
+      "options": {
+        "uml": {
+          "offset": {
+            "top": 148.99305725097656,
+            "left": 350.03472900390625
+          }
+        }
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "startState": "issued",
+      "finishState": "acknowledged",
+      "name": "acknowledge",
+      "caption": "Acknowledge",
+      "signBefore": false,
+      "signAfter": false,
+      "confirm": false,
+      "confirmMessage": "",
+      "assignments": [
+        {
+          "key": "state",
+          "value": "acknowledged"
+        },
+        {
+          "key": "dateAcknowledging",
+          "value": "now()"
+        },
+        {
+          "key": "employeeAcknowledging",
+          "value": "$$uid"
+        }
+      ],
+      "conditions": [],
+      "roles": [
+        "Cashiers",
+        "Admins"
+      ]
+    },
+    {
+      "startState": "acknowledged",
+      "finishState": "expired",
+      "name": "close",
+      "caption": "Close",
+      "signBefore": false,
+      "signAfter": false,
+      "confirm": false,
+      "confirmMessage": "",
+      "assignments": [
+        {
+          "key": "state",
+          "value": "expired"
+        }
+      ],
+      "conditions": [
+        {
+          "property": "state",
+          "operation": 0,
+          "value": [
+            "acknowledged"
+          ],
+          "nestedConditions": []
+        },
+        {
+          "property": "dateCompletion",
+          "operation": 8,
+          "value": [
+            "$$now"
+          ],
+          "nestedConditions": []
+        }
+      ],
+      "roles": [
+        "Cashier",
+        "Admins"
+      ]
+    }
+  ]
+}

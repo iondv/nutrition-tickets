@@ -1,0 +1,15 @@
+{
+  "code": "tickets",
+  "caption": "Tickets",
+  "type": 1,
+  "orderNumber": 10,
+  "title": "",
+  "hint": "",
+  "classname": "tickets",
+  "container": "",
+  "collection": "",
+  "url": "",
+  "conditions": [],
+  "sorting": [],
+  "pathChains": []
+}
