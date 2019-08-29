@@ -55,8 +55,8 @@ curl -L -s https://github.com/iondv/iondv-app/archive/master.zip > iondv-app.zip
 
 Для дополнительной информации смотрите следующие ресурсы:
 
-* [Иструкция по созданию IONDV. Ticket](manuals/RP_telecom.docx)
-* [Руководство пользователя IONDV. Studio](manuals/RA_telecom.docx)
+* [Инструкция по созданию IONDV. Ticket](tutorial/ru/index.md)
+* [Руководство пользователя IONDV. Studio](https://github.com/iondv/studio/tree/master/manuals/RP_studio.docx)
 * [IONDV. Framework](https://iondv.com/) 
 * [Facebook](https://www.facebook.com/iondv/)
 
