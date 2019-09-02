@@ -1,25 +1,25 @@
 users:
   - id: operator
     name: Оператор
-    pwd: operator
+    pwd: ion-operator
     type: local
     roles:
       - Operators
-  - id: admin
+  - id: demo
     name: Администратор
-    pwd: admin
+    pwd: ion-demo
     type: local
     roles:
       - Admins
   - id: cashier
     name: Кассир
-    pwd: cashier
+    pwd: ion-cashier
     type: local
     roles:
       - Cashiers
   - id: controller
     name: Контролер
-    pwd: controller
+    pwd: ion-controller
     type: local
     roles:
       - Controllers
