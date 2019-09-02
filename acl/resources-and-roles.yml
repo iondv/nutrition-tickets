@@ -1,11 +1,11 @@
 roles:
   - id: Admins
-    name: Администраторы
+    name: Admins
     permissions:
       "*":
         - full
   - id: Operators
-    name: Операторы
+    name: Operators
     permissions:
       n:::nutrition-tickets@recipient:
         - read
@@ -32,7 +32,7 @@ roles:
         - use
         - write
   - id: Cashiers
-    name: Кассир
+    name: Cashiers
     permissions:
       n:::nutrition-tickets@recipient:
         - read
@@ -57,7 +57,7 @@ roles:
       c:::person@nutrition-tickets:
         - read
   - id: Controllers
-    name: Контролер
+    name: Controllers
     permissions:
       n:::nutrition-tickets@recipient:
         - read
