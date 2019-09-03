@@ -33,7 +33,7 @@ This page in [English](/tutorial/en/index.md)
 --------------------------------------------------------------------------  
 
 
-#### [License](/LICENSE) &ensp; [Contact us](https://iondv.com/contacts) &ensp; [Russian](/tutorial/en/index.md)          
+#### [License](/LICENSE) &ensp; [Contact us](https://iondv.com/contacts) &ensp; [English](/tutorial/en/index.md)          
 <div><img src="https://mc.iondv.com/watch/local/docs/nutrition-tickets" style="position:absolute; left:-9999px;" height=1 width=1 alt="iondv metrics"></div>
 
 
