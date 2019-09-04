@@ -22,60 +22,59 @@ functionality, visual development environment [Studio](https://github.com/iondv/
 
 ## Description 
 
-**IONDV. Nutrition-tickets** - is a web application based on [IONDV. Framework](https://iondv.com), created in [IONDV. Studio](https://github.com/iondv/studio/blob/master/README.md). It is used as a registry to account, store, and present the data on preferential coupons for citizens with a preferential category. Основное назначение приложения это выдача талонов на получение социального питания.
-Ключевой сущность является *Талон*, который содержит в себе информацию описательного характера и ссылки на гражданина, которому предназначен. 
-*Главное преимущество* - контроль за льготными талонами граждан, имеющих ту или иную льнотную категорию, что позволяет, при необходимости, получить точную информации о талоне и гражданине.
+**IONDV. Nutrition-tickets** - is a web application based on [IONDV. Framework](https://iondv.com), created in [IONDV. Studio](https://github.com/iondv/studio/blob/master/README.md). It is used as a registry to account, store, and present the data on preferential coupons for citizens with a preferential category. The main purpose of the application is the issuance of tickets for social nutrition.
+The key entity is a *Ticket*, that contains descriptive information and references to the person. 
+*The main advantage* - control of tickets for people with a particular preferential category, which allows, if necessary, to obtain accurate information about a ticket or person.
 
-### Как создать? 
+### How to create? 
 
-Смотрите [видео](https://www.youtube.com/watch?v=e201ko9fkQ8&t=331s) о создании простого приложения [IONDV. Nutrition-tickets](https://github.com/iondv/nutrition-tickets) в **IONDV. Studio**. Читайте подробную [инструкцию](https://github.com/iondv/nutrition-tickets/blob/master/tutorial/ru/index.md), где поэтапно описаны действия для создания системы в **IONDV. Studio**.
+Watch a brief [video](https://www.youtube.com/watch?v=e201ko9fkQ8&t=331s) about creating a simple application - [IONDV. Nutrition-tickets](https://github.com/iondv/nutrition-tickets) in **IONDV. Studio**. Read the detailed [instructions](https://github.com/iondv/nutrition-tickets/blob/master/tutorial/ru/index.md), where the process is described step by step.
 
 <a href="https://www.youtube.com/watch?v=e201ko9fkQ8&t=331s" target="_blank"><img src="/tickets_video.png" height="250px" alt="" title=""></a>
 
-## Демо
+## Demo
 
-Демо доступ в систему для ознакомления, без регистрации: https://nutrition-tickets.iondv.com. Существует три основных роли: **оператор**, **кассир**, **контролёр**. Название роли соответствует ее логину, пароль один для всех трех логинов - **ion-demo**. 
+Demo access to the system without registration: https://nutrition-tickets.iondv.com. There are three different roles:  operator, cashier, and controller. The name of a role corresponds to its login, the password is one for all four logins - ion-demo. 
 
-Учетная запись для [бек-офиса](https://nutrition-tickets.iondv.com/registry) под пользователем с ролью "Администратор": логин **demo**, пароль **ion-demo**. 
+Account for [back office](https://nutrition-tickets.iondv.com/registry) as a user with the role of "Administrator": login - **demo**, password **ion-demo**.
 
-### Модули
+### Modules
 
-Основу реестра талонов составляет [модуль Регистри](https://github.com/iondv/registry). 
-Также используются: 
+The basis of all data is [Registry module](https://github.com/iondv/registry). **Registry module** – is a central module designed specifically for working with data based on metadata structures - including project management, programs, events, etc.
+Also used:
 
-* [Административный модуль](https://github.com/iondv/ionadmin) - позволяет управлять пользователями и ролями для доступа к системе и другими функциями, неоходимыми администартору.  
+* [Admin module](https://github.com/iondv/ionadmin) - is used for assigning rights, managing tasks on a schedule and other administrative tasks; 
 
-## Как получить?  
+## How to get the app?  
 
 ### Git
 
-Быстрый старт с использованием репозитория IONDV. Nutrition-tickets на GitHub — [подробная инструкция](https://github.com/iondv/framework/blob/master/docs/ru/readme.md#быстрый-старт-с-использованием-репозитория).  
+Quick start with the **IONDV. Nutrition-tickets** repository on GitHub — [detailed instruction](https://github.com/iondv/framework#quick-start-with-the-repository).  
 
-1. Установите системное окружение и глобальные зависимости.
-2. Клонируйте ядро, модуль и приложение.
-3. Соберите и разверните приложение.
-4. Запустите.
+1. Set the system environment and global dependencies.
+2. Clone the core, module and application.
+3. Build and deploy the app.
+4. Run.
 
-Или установка и запуск в одну строку под Linux с использованием установщика [iondv-app](https://github.com/iondv/iondv-app) (требуется локально node.js, MongoDB и Git):
+Install and run with a single line under Linux using the [iondv-app](https://github.com/iondv/iondv-app) installer (install lоcally node.js, MongoDB и Git):
 ```
 bash <(curl -sL https://raw.githubusercontent.com/iondv/iondv-app/master/iondv-app) -q -i -m localhost:27017 nutrition-tickets
 ```
-Где вместо `localhost:27017` нужно указать адрес MongoDb. После запуска открыть ссылку 'http://localhost:8888', учетная запись бек офиса **demo**, пароль **ion-demo**.
+Where insted of `localhost:27017` you need to set the MongoDb adress. After launch, open the link 'http://localhost:8888', account back office is available - 'http://localhost:8888/registry' **demo**, password **ion-demo**.
 
 ### Docker
 
-Запуск приложения с использованием докер контейнера - [подробная инструкция](https://hub.docker.com/r/iondv/nutrition-tickets).
+Run application using docker container - [detailed instruction](https://hub.docker.com/r/iondv/nutrition-tickets).
 
-1. Запустите СУБД mongodb: `docker run --name mongodb -v mongodb_data:/data/db -p 27017:27017 -d mongo`
-2. Запустите IONDV. Telecom `docker run -d -p 80:8888 --link mongodb iondv/nutrition-tickets`.
-3. Откройте ссылку `http://localhost` в браузере через минуту (время требуется для инициализации данных). Для бек офиса логин: **demo**, пароль: **ion-demo** 
+1. Run MongoDB: `docker run --name mongodb -v mongodb_data:/data/db -p 27017:27017 -d mongo`
+2. Run IONDV. Nutrition-tickets `docker run -d -p 80:8888 --link mongodb iondv/nutrition-tickets`.
+3. Open the `http://localhost` link in a browser in a minute (time required to initialize data). For back office login: **demo**, password: **ion-demo** 
 
-## Ссылки
+## Useful links
 
-Для дополнительной информации смотрите следующие ресурсы:
+Some handy links to learn more information:
 
-* [Инструкция по созданию IONDV. Ticket](tutorial/ru/index.md)
-* [Руководство пользователя IONDV. Studio](https://github.com/iondv/studio/tree/master/manuals/RP_studio.docx)
+* [Instruction to create the app in ION. Studio](tutorial/en/index.md)
 * [IONDV. Framework](https://iondv.com/) 
 * [Facebook](https://www.facebook.com/iondv/)
 
