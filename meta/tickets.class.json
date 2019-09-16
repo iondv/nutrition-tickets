@@ -121,7 +121,7 @@
       "itemsClass": "",
       "backRef": "",
       "backColl": "",
-      "defaultValue": "{\"dateAdd\":[\"$dateIssue\",28,\"d\"]}",
+      "defaultValue": {"dateAdd":["$dateIssue",28,"d"]},
       "binding": null,
       "selConditions": null,
       "selSorting": null,

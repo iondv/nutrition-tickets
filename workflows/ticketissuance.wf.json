@@ -20,15 +20,7 @@
       "conditions": [],
       "itemPermissions": [],
       "propertyPermissions": [],
-      "selectionProviders": [],
-      "options": {
-        "uml": {
-          "offset": {
-            "top": 148.99305725097656,
-            "left": 124.02780151367188
-          }
-        }
-      }
+      "selectionProviders": []
     },
     {
       "name": "expired",
@@ -37,15 +29,7 @@
       "conditions": [],
       "itemPermissions": [],
       "propertyPermissions": [],
-      "selectionProviders": [],
-      "options": {
-        "uml": {
-          "offset": {
-            "top": 148.99305725097656,
-            "left": 350.03472900390625
-          }
-        }
-      }
+      "selectionProviders": []
     }
   ],
   "transitions": [
@@ -103,11 +87,9 @@
           "nestedConditions": []
         },
         {
-          "property": "dateCompletion",
-          "operation": 8,
-          "value": [
-            "$$now"
-          ],
+          "property": "dateAcknowledging",
+          "operation": 3,
+          "value": null,
           "nestedConditions": []
         }
       ],
