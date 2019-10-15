@@ -10,6 +10,7 @@
   "ionModulesDependencies": {
     "registry": "3.0.10",
     "dashboard": "1.1.8",
-    "ionadmin": "2.1.3"
+    "ionadmin": "2.1.3",
+    "rest": "2.0.1"
   }
 }
