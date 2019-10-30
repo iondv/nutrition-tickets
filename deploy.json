@@ -6,6 +6,7 @@
     "staticOptions": {
       "maxAge": 3600000
     },
+    "lang": "en",
     "moduleTitles": {},
     "explicitTopMenu": [],
     "plugins": {
@@ -69,11 +70,23 @@
               "required": false,
               "readonly": true
             },
-            "dateBirth": {
+            "birthDate": {
               "caption": "Дата рождения",
               "required": false,
               "readonly": true,
               "type": 120
+            },
+            "createDatet": {
+              "caption": "Метка времени создания",
+              "required": false,
+              "readonly": true,
+              "type": 6
+            },
+            "modifeDate": {
+              "caption": "Метка времени изменения",
+              "required": false,
+              "readonly": true,
+              "type": 6
             },
             "creator": {
               "caption": "Создан пользователем",
@@ -94,12 +107,20 @@
                 "surname": "surname",
                 "name": "name",
                 "patronymic": "patronymic",
-                "dateBirth": "birthDate",
+                "birthDate": "birthDate",
+                "createDatet": "createDatet",
+                "modifeDate": "modifeDate",
                 "creator": "creator",
                 "editor": "editor"
-              },
+              }
+            },
+            "employee@nutrition-tickets": {
+              "filter": "person.user",
               "recursion": {
-                "id": "id"
+                "id": "employee.id"
+              },
+              "properties": {
+                "employee": "id"
               }
             }
           }
@@ -115,5 +136,85 @@
     },
     "jobs": {}
   },
-  "modules": {}
+  "modules": {
+    "ionadmin": {
+      "globals": null,
+      "import": null,
+      "statics": null
+    },
+    "registry": {
+      "import": null,
+      "globals": {
+        "defaultPath": "",
+        "inlineForm": true,
+        "logo": "common-static/logo.png",
+        "statics": {
+          "common-static": "applications/nutrition-tickets/templates/static"
+        },
+        "di": {
+          "itemToExcel": {
+            "module": "modules/registry/export/itemToExcel",
+            "initMethod": "init",
+            "initLevel": 0,
+            "options": {
+              "tplDir": "applications/nutrition-tickets/export/item",
+              "injectors": []
+            }
+          },
+          "itemToDocx": {
+            "module": "modules/registry/export/itemToDocx",
+            "initMethod": "init",
+            "initLevel": 0,
+            "options": {
+              "tplDir": "applications/nutrition-tickets/export/item",
+              "injectors": []
+            }
+          },
+          "listToDocx": {
+            "module": "modules/registry/export/listToDocx",
+            "initMethod": "init",
+            "initLevel": 0,
+            "options": {
+              "tplDir": "applications/nutrition-tickets/export/list",
+              "log": "ion://sysLog"
+            }
+          },
+          "listToExcel": {
+            "module": "modules/registry/export/listToExcel",
+            "initMethod": "init",
+            "initLevel": 0,
+            "options": {
+              "tplDir": "applications/nutrition-tickets/export/list",
+              "log": "ion://sysLog"
+            }
+          },
+          "export": {
+            "options": {
+              "configs": {}
+            }
+          }
+        }
+      }
+    },
+    "rest": {
+      "globals": {
+        "di": {
+          "simple": {
+            "module": "applications/nutrition-tickets/service/simple"
+          },
+          "crud": {
+            "module": "modules/rest/lib/impl/crud",
+			"options": {
+              "auth": "ion://auth",
+              "dataRepo": "ion://dataRepo"
+            }
+          }
+        },
+        "authMode": {
+          "crud": "header",
+          "simple": "header"
+        }
+      }
+    }
+  }
 }
