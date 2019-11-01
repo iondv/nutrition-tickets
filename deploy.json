@@ -198,10 +198,7 @@
     },
     "rest": {
       "globals": {
-        "di": {
-          "simple": {
-            "module": "applications/nutrition-tickets/service/simple"
-          },
+        "di": {          
           "crud": {
             "module": "modules/rest/lib/impl/crud",
 			"options": {
@@ -211,8 +208,7 @@
           }
         },
         "authMode": {
-          "crud": "header",
-          "simple": "header"
+          "crud": "header"
         }
       }
     }
