@@ -58,7 +58,7 @@ Quick start with the **IONDV. Nutrition-tickets** repository on GitHub — [deta
 
 Install and run with a single line under Linux using the [iondv-app](https://github.com/iondv/iondv-app) installer (install lоcally node.js, MongoDB и Git):
 ```
-bash <(curl -sL https://raw.githubusercontent.com/iondv/iondv-app/master/iondv-app) -q -i -m localhost:27017 nutrition-tickets
+bash <(curl -sL https://raw.githubusercontent.com/iondv/iondv-app/master/iondv-app) -t git -q -i -m localhost:27017 nutrition-tickets
 ```
 Where insted of `localhost:27017` you need to set the MongoDb adress. After launch, open the link 'http://localhost:8888', account back office is available - 'http://localhost:8888/registry' **demo**, password **ion-demo**.
 
