@@ -147,8 +147,8 @@
       "globals": {
         "defaultPath": "",
         "inlineForm": true,
-        "logo": "common-static/logo.png",
-        "statics": {
+        "logo-2check": "common-static/logo.png",
+        "statics-2check": {
           "common-static": "applications/nutrition-tickets/templates/static"
         },
         "di": {
