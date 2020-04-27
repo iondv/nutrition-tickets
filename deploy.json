@@ -206,9 +206,6 @@
               "dataRepo": "ion://dataRepo"
             }
           }
-        },
-        "authMode": {
-          "crud": "header"
         }
       }
     }
