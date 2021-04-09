@@ -7,10 +7,25 @@
     "minor": true,
     "patch": true
   },
-  "ionModulesDependencies": {
-    "registry": "3.0.10",
-    "dashboard": "1.1.8",
-    "ionadmin": "2.1.3",
-    "rest": "2.0.1"
+  "scripts": {
+    "test": "mocha ./test/e2e/**/*.js",
+    "www": "./node_modules/.bin/www",
+    "acl": "./node_modules/.bin/acl --d",
+    "import-data": "./node_modules/.bin/import-data",
+    "import-meta": "./node_modules/.bin/import --ns nutrition-tickets",
+    "import-bi": "./node_modules/.bin/bi-import --ns nutrition-tickets"
+  },
+  "dependencies": {
+    "@iondv/accounts": "iondv/accounts#main",
+    "@iondv/acl": "iondv/acl#main",
+    "@iondv/auth": "iondv/auth#main",
+    "@iondv/commons": "iondv/commons#IONCORE-642",
+    "@iondv/dashboard": "iondv/dashboard#v2",
+    "@iondv/db": "iondv/db#main",
+    "@iondv/ionadmin": "iondv/ionadmin#v2",
+    "@iondv/meta-model": "iondv/meta-model#IONCORE-642",
+    "@iondv/registry": "iondv/registry#v2",
+    "@iondv/rest": "iondv/rest#v2",
+    "@iondv/web": "iondv/web#main"
   }
 }

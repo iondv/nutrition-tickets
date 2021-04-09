@@ -11,7 +11,7 @@
     "explicitTopMenu": [],
     "plugins": {
       "actualAclProvider": {
-        "module": "core/impl/access/DsAcl",
+        "module": "@iondv/acl/access/DsAcl",
         "initMethod": "init",
         "initLevel": 1,
         "options": {
@@ -19,7 +19,7 @@
         }
       },
       "aclProvider": {
-        "module": "core/impl/access/aclMetaMap",
+        "module": "@iondv/acl/access/aclMetaMap",
         "options": {
           "dataRepo": "ion://dataRepo",
           "acl": "ion://actualAclProvider",
@@ -50,7 +50,7 @@
         }
       },
       "customProfile": {
-        "module": "lib/plugins/customProfile",
+        "module": "@iondv/commons/lib/CustomProfile",
         "options": {
           "metaRepo": "ion://metaRepo",
           "dataRepo": "ion://dataRepo",
@@ -149,42 +149,42 @@
         "inlineForm": true,
         "logo-2check": "common-static/logo.png",
         "statics-2check": {
-          "common-static": "applications/nutrition-tickets/templates/static"
+          "common-static": "./templates/static"
         },
         "di": {
           "itemToExcel": {
-            "module": "modules/registry/export/itemToExcel",
+            "module": "@iondv/registry/export/itemToExcel",
             "initMethod": "init",
             "initLevel": 0,
             "options": {
-              "tplDir": "applications/nutrition-tickets/export/item",
+              "tplDir": "./export/item",
               "injectors": []
             }
           },
           "itemToDocx": {
-            "module": "modules/registry/export/itemToDocx",
+            "module": "@iondv/registry/export/itemToDocx",
             "initMethod": "init",
             "initLevel": 0,
             "options": {
-              "tplDir": "applications/nutrition-tickets/export/item",
+              "tplDir": "./export/item",
               "injectors": []
             }
           },
           "listToDocx": {
-            "module": "modules/registry/export/listToDocx",
+            "module": "@iondv/registry/export/listToDocx",
             "initMethod": "init",
             "initLevel": 0,
             "options": {
-              "tplDir": "applications/nutrition-tickets/export/list",
+              "tplDir": "./export/list",
               "log": "ion://sysLog"
             }
           },
           "listToExcel": {
-            "module": "modules/registry/export/listToExcel",
+            "module": "@iondv/registry/export/listToExcel",
             "initMethod": "init",
             "initLevel": 0,
             "options": {
-              "tplDir": "applications/nutrition-tickets/export/list",
+              "tplDir": "./export/list",
               "log": "ion://sysLog"
             }
           },
@@ -198,9 +198,9 @@
     },
     "rest": {
       "globals": {
-        "di": {          
+        "di": {
           "crud": {
-            "module": "modules/rest/lib/impl/crud",
+            "module": "@iondv/rest/lib/impl/crud",
 			"options": {
               "auth": "ion://auth",
               "dataRepo": "ion://dataRepo"
