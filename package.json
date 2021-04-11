@@ -19,11 +19,11 @@
     "@iondv/accounts": "iondv/accounts#main",
     "@iondv/acl": "iondv/acl#main",
     "@iondv/auth": "iondv/auth#main",
-    "@iondv/commons": "iondv/commons#IONCORE-642",
+    "@iondv/commons": "iondv/commons#main",
     "@iondv/dashboard": "iondv/dashboard#v2",
     "@iondv/db": "iondv/db#main",
     "@iondv/ionadmin": "iondv/ionadmin#v2",
-    "@iondv/meta-model": "iondv/meta-model#IONCORE-642",
+    "@iondv/meta-model": "iondv/meta-model#main",
     "@iondv/registry": "iondv/registry#v2",
     "@iondv/rest": "iondv/rest#v2",
     "@iondv/web": "iondv/web#main"
